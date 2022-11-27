@@ -161,6 +161,7 @@ class AppointmentView(APIView):
     appointment_serializer_class = AppointmentSerializer
 
     def post(self, request):
+        print(request)
         appo_serializer = self.appointment_serializer_class(data=request.data)
 
         if appo_serializer.is_valid():
